@@ -1,5 +1,14 @@
+div {
+    position: absolute;
+    left: 50%;
+    margin-left: -50%;
+
+}
+
 td {
     border: 1px solid blue;
+    width: 100px;
+    height: 100px;
 }
 td:hover {
     background: orange;

@@ -15,11 +15,23 @@ const winningCombinations = [
 ];
 
 const handleClick = function(event) {
-const cells = event.target;
-console.log(cells.id);
+const cell = event.target;
+cell.innerHTML = currentPlayer;
 }
 
-const cells = document.querySelectorAll('td');
+if (currentPlayer === 'X' ) {
+    playerSelections = playerXSelections;
+    nextPlayer = 'O';
+} else {
+    playerSelections = playerOSelections;
+    nextPlayer = 'X';
+}
+playerSelections.push(Number(.id));
+// Swap players
+currentPlayer = nextPlayer;
+
+
+/*const cells = document.querySelectorAll('td');
 for(let i=0; i<cells.length; i++) {
     cells[i].addEventListener('click',handleClick);
-}
+}*/
