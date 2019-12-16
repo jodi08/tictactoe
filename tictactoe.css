@@ -1,3 +1,7 @@
+:root {
+    box-sizing: border-box;
+}
+
 div {
     position: absolute;
     left: 50%;
@@ -7,6 +11,7 @@ div {
 
 td {
     border: 1px solid blue;
+    border-collapse: collapse;
     width: 100px;
     height: 100px;
 }

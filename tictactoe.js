@@ -17,8 +17,6 @@ const winningCombinations = [
 const handleClick = function(event) {
 const cell = event.target;
 cell.innerHTML = currentPlayer;
-}
-
 if (currentPlayer === 'X' ) {
     playerSelections = playerXSelections;
     nextPlayer = 'O';
@@ -26,12 +24,16 @@ if (currentPlayer === 'X' ) {
     playerSelections = playerOSelections;
     nextPlayer = 'X';
 }
-playerSelections.push(Number(.id));
+playerSelections.push(Number(cell.id));
 // Swap players
 currentPlayer = nextPlayer;
 
+}
+const cells = document.querySelectorAll('td');
+for(let i = 0; i<cells.length; i++) {
+ cells[i].addEventListener('click', handleClick);   
+}
 
-/*const cells = document.querySelectorAll('td');
-for(let i=0; i<cells.length; i++) {
-    cells[i].addEventListener('click',handleClick);
-}*/
+
+
+
